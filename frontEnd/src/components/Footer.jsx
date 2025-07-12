@@ -8,7 +8,7 @@ export default function Footer() {
 
         <div className="flex gap-6">
           <a
-            href="https://github.com/Dollypee48/api-flow-tester"
+            href="https://github.com/Dollypee48/FlowAPI"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition duration-200"

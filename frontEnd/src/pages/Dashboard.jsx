@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import RequestEditor from "../components/RequestEditor";
 import ResponseViewer from "../components/ResponseViewer";
+import ExportButton from "../components/ExportButton";
 
 export default function Dashboard() {
   const [currentProject, setCurrentProject] = useState(null);
@@ -16,7 +17,8 @@ export default function Dashboard() {
         <Sidebar onProjectSelect={setCurrentProject} />
 
         <main className="flex-1 p-6 overflow-auto">
-          <div className="flex justify-between mb-6">
+          {/* Header and Project Controls */}
+          <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
             <div>
               <h1 className="text-2xl font-semibold text-blue-400">FlowAPI</h1>
               <p className="text-sm text-gray-400">
@@ -26,8 +28,12 @@ export default function Dashboard() {
                 </span>
               </p>
             </div>
+
+            {/* Only show Export when a project is selected */}
+            {currentProject && <ExportButton project={currentProject} />}
           </div>
 
+          {/* Request/Response Area */}
           {currentProject ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <RequestEditor

@@ -22,7 +22,7 @@ export default function About() {
             <li>🔹 Send GET, POST, PUT, DELETE requests</li>
             <li>🔹 Preview structured JSON responses</li>
             <li>🔹 Include headers, body, tokens, and query params</li>
-            <li>🔹 Export & import test flows</li>
+            <li>🔹 Export test flows</li>
             <li>🔹 Built for speed and simplicity</li>
           </ul>
 
